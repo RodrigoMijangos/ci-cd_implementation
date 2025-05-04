@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	domain "raitings.com/api/entities"
+	"raitings.com/api/domain"
 )
 
 type PostgresUserRepository struct {
