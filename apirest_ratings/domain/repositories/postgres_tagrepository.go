@@ -28,3 +28,7 @@ func (r *PostgresTagRepository) Save(ctx context.Context, tag *domain.Tag) error
 	fmt.Printf("Adapter: Tag %s saved to PostgreSQL.\n", tag.Tag)
 	return nil
 }
+
+func (r *PostgresTagRepository) Close() error {
+	return r.db.Close()
+}

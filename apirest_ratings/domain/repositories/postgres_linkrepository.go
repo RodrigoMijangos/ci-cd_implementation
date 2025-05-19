@@ -23,9 +23,13 @@ func (r *PostgresLinkRepository) Save(ctx context.Context, link *domain.Link) er
 	_, err := r.db.ExecContext(ctx, query, link.Movieid, link.Imdbid, link.Tmdbid)
 
 	if err != nil {
-		return fmt.Errorf("adapter: failed to save user %d to postgres: %w", link.Movieid, err)
+		return fmt.Errorf("adapter: failed to save user %s to postgres: %w", link.Movieid, err)
 	}
 
-	fmt.Printf("Adapter: Link %d saved to PostgreSQL.\n", link.Movieid)
+	fmt.Printf("Adapter: Link %s saved to PostgreSQL.\n", link.Movieid)
 	return nil
+}
+
+func (r *PostgresLinkRepository) Close() error {
+	return r.db.Close()
 }
