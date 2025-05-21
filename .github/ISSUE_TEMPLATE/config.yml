@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+    - name: Soporte Técnico
+      url: https://github.com/RodrigoMijangos/ci-cd_implementation/discussions
+      about: Si tu problema no encaja en las plantillas existentes, por favor, abre una discusión.
+    - name: Preguntas Generales
+      url: https://github.com/RodrigoMijangos/ci-cd_implementation/discussions
+      about: ¿Tienes una pregunta general que no es un bug o una característica?
